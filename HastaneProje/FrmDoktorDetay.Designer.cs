@@ -40,9 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tblDoktorlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblRandevuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblRandevuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.randevuIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hastaTCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hastaAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +51,12 @@
             this.randevuSaatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aciklamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.randevuDurumDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tblRandevuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hastaneProjeDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.hastaneProjeDataSet = new HastaneProje.HastaneProjeDataSet();
+            this.tblDoktorlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hastaneProjeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblRandevuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_DoktorlarTableAdapter = new HastaneProje.HastaneProjeDataSetTableAdapters.Tbl_DoktorlarTableAdapter();
             this.tbl_RandevuTableAdapter = new HastaneProje.HastaneProjeDataSetTableAdapters.Tbl_RandevuTableAdapter();
             this.tableAdapterManager = new HastaneProje.HastaneProjeDataSetTableAdapters.TableAdapterManager();
@@ -64,12 +64,12 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblDoktorlarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRandevuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRandevuBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneProjeDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneProjeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDoktorlarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneProjeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRandevuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -145,6 +145,7 @@
             this.rchSikayet.Size = new System.Drawing.Size(340, 323);
             this.rchSikayet.TabIndex = 8;
             this.rchSikayet.Text = "";
+            this.rchSikayet.TextChanged += new System.EventHandler(this.rchSikayet_TextChanged);
             // 
             // label3
             // 
@@ -189,21 +190,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(966, 655);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tblDoktorlarBindingSource
-            // 
-            this.tblDoktorlarBindingSource.DataMember = "Tbl_Doktorlar";
-            this.tblDoktorlarBindingSource.DataSource = this.hastaneProjeDataSetBindingSource;
-            // 
-            // tblRandevuBindingSource
-            // 
-            this.tblRandevuBindingSource.DataMember = "Tbl_Randevu";
-            this.tblRandevuBindingSource.DataSource = this.hastaneProjeDataSetBindingSource;
-            // 
-            // tblRandevuBindingSource1
-            // 
-            this.tblRandevuBindingSource1.DataMember = "Tbl_Randevu";
-            this.tblRandevuBindingSource1.DataSource = this.hastaneProjeDataSetBindingSource1;
             // 
             // randevuIDDataGridViewTextBoxColumn
             // 
@@ -272,6 +258,11 @@
             this.randevuDurumDataGridViewCheckBoxColumn.HeaderText = "RandevuDurum";
             this.randevuDurumDataGridViewCheckBoxColumn.Name = "randevuDurumDataGridViewCheckBoxColumn";
             // 
+            // tblRandevuBindingSource1
+            // 
+            this.tblRandevuBindingSource1.DataMember = "Tbl_Randevu";
+            this.tblRandevuBindingSource1.DataSource = this.hastaneProjeDataSetBindingSource1;
+            // 
             // hastaneProjeDataSetBindingSource1
             // 
             this.hastaneProjeDataSetBindingSource1.DataSource = this.hastaneProjeDataSet;
@@ -282,10 +273,20 @@
             this.hastaneProjeDataSet.DataSetName = "HastaneProjeDataSet";
             this.hastaneProjeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tblDoktorlarBindingSource
+            // 
+            this.tblDoktorlarBindingSource.DataMember = "Tbl_Doktorlar";
+            this.tblDoktorlarBindingSource.DataSource = this.hastaneProjeDataSetBindingSource;
+            // 
             // hastaneProjeDataSetBindingSource
             // 
             this.hastaneProjeDataSetBindingSource.DataSource = this.hastaneProjeDataSet;
             this.hastaneProjeDataSetBindingSource.Position = 0;
+            // 
+            // tblRandevuBindingSource
+            // 
+            this.tblRandevuBindingSource.DataMember = "Tbl_Randevu";
+            this.tblRandevuBindingSource.DataSource = this.hastaneProjeDataSetBindingSource;
             // 
             // tbl_DoktorlarTableAdapter
             // 
@@ -318,7 +319,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDoktorDetay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDoktorDetay";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -326,12 +329,12 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblDoktorlarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRandevuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRandevuBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneProjeDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneProjeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDoktorlarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneProjeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRandevuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

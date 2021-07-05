@@ -45,6 +45,11 @@ namespace HastaneProje
             
         }
 
+        private void rchSikayet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void FrmDoktorDetay_Load(object sender, EventArgs e)
         {
             // TODO: Bu kod satırı 'hastaneProjeDataSet.Tbl_Doktorlar' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.

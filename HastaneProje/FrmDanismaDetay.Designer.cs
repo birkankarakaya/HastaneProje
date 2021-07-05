@@ -109,9 +109,9 @@
             this.groupBox2.Controls.Add(this.BtnYeniRandevu);
             this.groupBox2.Controls.Add(this.btnDoktorDuzenle);
             this.groupBox2.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(707, 0);
+            this.groupBox2.Location = new System.Drawing.Point(1063, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(623, 95);
+            this.groupBox2.Size = new System.Drawing.Size(267, 95);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menü";
@@ -119,7 +119,7 @@
             // BtnYeniRandevu
             // 
             this.BtnYeniRandevu.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnYeniRandevu.Location = new System.Drawing.Point(132, 25);
+            this.BtnYeniRandevu.Location = new System.Drawing.Point(137, 25);
             this.BtnYeniRandevu.Name = "BtnYeniRandevu";
             this.BtnYeniRandevu.Size = new System.Drawing.Size(120, 54);
             this.BtnYeniRandevu.TabIndex = 2;
@@ -130,7 +130,7 @@
             // btnDoktorDuzenle
             // 
             this.btnDoktorDuzenle.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDoktorDuzenle.Location = new System.Drawing.Point(6, 25);
+            this.btnDoktorDuzenle.Location = new System.Drawing.Point(11, 25);
             this.btnDoktorDuzenle.Name = "btnDoktorDuzenle";
             this.btnDoktorDuzenle.Size = new System.Drawing.Size(120, 54);
             this.btnDoktorDuzenle.TabIndex = 0;
@@ -167,6 +167,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(219, 26);
             this.textBox2.TabIndex = 10;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -183,9 +184,9 @@
             this.groupBox4.Controls.Add(this.dataGridView1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox4.Location = new System.Drawing.Point(0, 210);
+            this.groupBox4.Location = new System.Drawing.Point(0, 178);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1333, 482);
+            this.groupBox4.Size = new System.Drawing.Size(1344, 533);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Randevu Listesi";
@@ -199,7 +200,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1327, 457);
+            this.dataGridView1.Size = new System.Drawing.Size(1338, 508);
             this.dataGridView1.TabIndex = 4;
             // 
             // FrmDanismaDetay
@@ -207,7 +208,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(1333, 692);
+            this.ClientSize = new System.Drawing.Size(1344, 711);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -216,7 +217,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDanismaDetay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDanismaDetay";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmDanismaDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

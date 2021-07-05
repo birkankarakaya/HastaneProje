@@ -78,5 +78,10 @@ namespace HastaneProje
             dataGridView1.DataSource = dt3;
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
