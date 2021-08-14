@@ -39,7 +39,7 @@ namespace HastaneProje
             }
 
         }
-
+        
         private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
         {
             

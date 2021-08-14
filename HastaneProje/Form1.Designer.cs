@@ -28,132 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button DoktorGiris;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGirisler));
-            this.DoktorGiris = new System.Windows.Forms.Button();
-            this.DanismaGiris = new System.Windows.Forms.Button();
-            this.HastaGiris = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            System.Windows.Forms.Button DanismaGiris;
+            System.Windows.Forms.Button HastaGiris;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            DoktorGiris = new System.Windows.Forms.Button();
+            DanismaGiris = new System.Windows.Forms.Button();
+            HastaGiris = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // DoktorGiris
             // 
-            this.DoktorGiris.BackColor = System.Drawing.SystemColors.Control;
-            this.DoktorGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DoktorGiris.BackgroundImage")));
-            this.DoktorGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.DoktorGiris.Location = new System.Drawing.Point(470, 278);
-            this.DoktorGiris.Margin = new System.Windows.Forms.Padding(4);
-            this.DoktorGiris.Name = "DoktorGiris";
-            this.DoktorGiris.Size = new System.Drawing.Size(90, 90);
-            this.DoktorGiris.TabIndex = 0;
-            this.DoktorGiris.UseVisualStyleBackColor = false;
-            this.DoktorGiris.Click += new System.EventHandler(this.DoktorGiris_Click);
+            DoktorGiris.BackColor = System.Drawing.SystemColors.Control;
+            DoktorGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DoktorGiris.BackgroundImage")));
+            DoktorGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            DoktorGiris.Location = new System.Drawing.Point(498, 324);
+            DoktorGiris.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            DoktorGiris.Name = "DoktorGiris";
+            DoktorGiris.Size = new System.Drawing.Size(72, 81);
+            DoktorGiris.TabIndex = 0;
+            DoktorGiris.UseVisualStyleBackColor = false;
+            DoktorGiris.Click += new System.EventHandler(this.DoktorGiris_Click);
             // 
             // DanismaGiris
             // 
-            this.DanismaGiris.BackColor = System.Drawing.SystemColors.Control;
-            this.DanismaGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DanismaGiris.BackgroundImage")));
-            this.DanismaGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.DanismaGiris.Location = new System.Drawing.Point(650, 278);
-            this.DanismaGiris.Margin = new System.Windows.Forms.Padding(4);
-            this.DanismaGiris.Name = "DanismaGiris";
-            this.DanismaGiris.Size = new System.Drawing.Size(90, 90);
-            this.DanismaGiris.TabIndex = 1;
-            this.DanismaGiris.UseVisualStyleBackColor = false;
-            this.DanismaGiris.Click += new System.EventHandler(this.DanismaGiris_Click);
+            DanismaGiris.BackColor = System.Drawing.SystemColors.Control;
+            DanismaGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DanismaGiris.BackgroundImage")));
+            DanismaGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            DanismaGiris.Location = new System.Drawing.Point(642, 324);
+            DanismaGiris.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            DanismaGiris.Name = "DanismaGiris";
+            DanismaGiris.Size = new System.Drawing.Size(72, 81);
+            DanismaGiris.TabIndex = 1;
+            DanismaGiris.UseVisualStyleBackColor = false;
+            DanismaGiris.Click += new System.EventHandler(this.DanismaGiris_Click);
             // 
             // HastaGiris
             // 
-            this.HastaGiris.BackColor = System.Drawing.SystemColors.Control;
-            this.HastaGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HastaGiris.BackgroundImage")));
-            this.HastaGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.HastaGiris.Location = new System.Drawing.Point(827, 278);
-            this.HastaGiris.Margin = new System.Windows.Forms.Padding(4);
-            this.HastaGiris.Name = "HastaGiris";
-            this.HastaGiris.Size = new System.Drawing.Size(90, 90);
-            this.HastaGiris.TabIndex = 2;
-            this.HastaGiris.UseVisualStyleBackColor = false;
-            this.HastaGiris.Click += new System.EventHandler(this.HastaGiris_Click);
+            HastaGiris.BackColor = System.Drawing.SystemColors.Control;
+            HastaGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HastaGiris.BackgroundImage")));
+            HastaGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            HastaGiris.Location = new System.Drawing.Point(784, 324);
+            HastaGiris.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            HastaGiris.Name = "HastaGiris";
+            HastaGiris.Size = new System.Drawing.Size(72, 81);
+            HastaGiris.TabIndex = 2;
+            HastaGiris.UseVisualStyleBackColor = false;
+            HastaGiris.Click += new System.EventHandler(this.HastaGiris_Click);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(457, 372);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Doktor Girişi";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(488, 409);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(94, 18);
+            label1.TabIndex = 3;
+            label1.Text = "Doktor Girişi";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(633, 372);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Danışma Girişi";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(628, 409);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(109, 18);
+            label2.TabIndex = 4;
+            label2.Text = "Danışma Girişi";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(823, 372);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Hasta Girişi";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(780, 409);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(88, 18);
+            label3.TabIndex = 5;
+            label3.Text = "Hasta Girişi";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 63);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 17);
+            this.label4.Location = new System.Drawing.Point(61, 15);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 20);
+            this.label4.Size = new System.Drawing.Size(172, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Proje Deneme Hastanesi";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 37);
+            this.label5.Location = new System.Drawing.Point(61, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 20);
+            this.label5.Size = new System.Drawing.Size(109, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "Yönetim Paneli";
             // 
             // FrmGirisler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(1333, 692);
+            this.ClientSize = new System.Drawing.Size(1344, 721);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.HastaGiris);
-            this.Controls.Add(this.DanismaGiris);
-            this.Controls.Add(this.DoktorGiris);
-            this.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Controls.Add(label3);
+            this.Controls.Add(label2);
+            this.Controls.Add(label1);
+            this.Controls.Add(HastaGiris);
+            this.Controls.Add(DanismaGiris);
+            this.Controls.Add(DoktorGiris);
+            this.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmGirisler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -166,13 +178,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button DoktorGiris;
-        private System.Windows.Forms.Button DanismaGiris;
-        private System.Windows.Forms.Button HastaGiris;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

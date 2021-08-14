@@ -23,7 +23,6 @@ namespace HastaneProje
 
         private void btnHastaKayit_Click(object sender, EventArgs e)
         {
-            
             SqlCommand komut = new SqlCommand("insert into Tbl_Hastalar (HastaTC,HastaAd,HastaSoyad,HastaTelefon,HastaSifre,HastaCinsiyet,DogumTarihi) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", mskTc.Text);
             komut.Parameters.AddWithValue("@p2", txtAd.Text);

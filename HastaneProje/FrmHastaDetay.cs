@@ -36,19 +36,15 @@ namespace HastaneProje
 
             //Randevu Geçmişi
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select* from Tbl_Randevu where HastaTC = '" + tc+"'", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select* from Tbl_Randevu where HastaTC = '" + tc+ "' AND convert(date,RandevuTarih) < convert(date, getdate())", bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
-
-            //Branşlar
-            SqlCommand komut2 = new SqlCommand("Select Brans From Tbl_Brans", bgl.baglanti());
-            SqlDataReader dr2 = komut2.ExecuteReader();
-            while (dr2.Read())
-            {
-                CmbBrans.Items.Add(dr2[0]);
-            }
-            bgl.baglanti().Close();
+            //Aktif Randevular
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da1 = new SqlDataAdapter("select* from Tbl_Randevu where HastaTC = '" + tc + "' AND convert(date,RandevuTarih) >= convert(date, getdate())", bgl.baglanti());
+            da1.Fill(dt1);
+            dataGridView2.DataSource = dt1;            
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
@@ -58,24 +54,12 @@ namespace HastaneProje
 
         private void CmbBrans_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CmbDoktor.Items.Clear();
-            SqlCommand komut3 = new SqlCommand("select DoktorAd,DoktorSoyad from Tbl_Doktorlar where DoktorBrans=@p1", bgl.baglanti());
-            komut3.Parameters.AddWithValue("@p1", CmbBrans.Text);
-            SqlDataReader dr3 = komut3.ExecuteReader();
-            while (dr3.Read())
-            {
-                CmbDoktor.Items.Add(dr3[0] + " " + dr3[1]);
-
-            }
-            bgl.baglanti().Close();
+            
         }
 
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select*from Tbl_Randevu where RandevuBrans='" + CmbBrans.Text + "' ", bgl.baglanti());
-            da.Fill(dt);
-            dataGridView2.DataSource = dt;
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -96,6 +80,18 @@ namespace HastaneProje
         private void LblDogTar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmHastaDuzenle frm = new FrmHastaDuzenle();
+            frm.tc1 = LblTC.Text;
+            frm.Show();            
         }
     }
 }

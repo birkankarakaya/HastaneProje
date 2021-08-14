@@ -29,7 +29,7 @@ namespace HastaneProje
 
         private void cmbBolum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbDoktor.Items.Clear();
+            cmbDoktor.DataSource = null;
             SqlCommand komut3 = new SqlCommand("select DoktorAd,DoktorSoyad from Tbl_Doktorlar where DoktorBrans=@p1", bgl.baglanti());
             komut3.Parameters.AddWithValue("@p1", cmbBolum.Text);
             SqlDataReader dr3 = komut3.ExecuteReader();

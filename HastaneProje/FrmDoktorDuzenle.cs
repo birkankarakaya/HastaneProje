@@ -77,5 +77,12 @@ namespace HastaneProje
             bgl.baglanti().Close();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmDanismaDetay fr = new FrmDanismaDetay();
+            fr.Show();
+            this.Close();
+        }
     }
 }

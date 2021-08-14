@@ -4291,8 +4291,8 @@ SELECT DoktorId, DoktorTC, DoktorAd, DoktorSoyad, DoktorBrans, DoktorSifre, Dokt
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
+            int dt = this.Adapter.Fill(dataTable);
+            return dt;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

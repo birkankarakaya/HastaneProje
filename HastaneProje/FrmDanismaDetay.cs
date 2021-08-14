@@ -30,7 +30,6 @@ namespace HastaneProje
         {
             YeniRandevu yr = new YeniRandevu();
             yr.Show();
-            this.Hide();
 
         }
         public string TCNumara;
@@ -50,12 +49,13 @@ namespace HastaneProje
             }
             bgl.baglanti().Close();
 
-            DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter("Select * From Tbl_Randevu", bgl.baglanti());
-            da1.Fill(dt1);
-            dataGridView1.DataSource = dt1;
-
-           
+            if (textBox2.Text == "") 
+            {
+                DataTable dt1 = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter("Select * From Tbl_Randevu", bgl.baglanti());
+                da1.Fill(dt1);
+                dataGridView1.DataSource = dt1;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -68,6 +68,14 @@ namespace HastaneProje
             this.dataGridView1.DataSource = ds.Tables[0];
             bgl.baglanti().Close();
 
+
+            if (textBox2.Text == "")
+            {
+                DataTable dt1 = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter("Select * From Tbl_Randevu", bgl.baglanti());
+                da1.Fill(dt1);
+                dataGridView1.DataSource = dt1;
+            }
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
