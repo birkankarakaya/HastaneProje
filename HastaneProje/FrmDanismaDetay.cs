@@ -23,7 +23,6 @@ namespace HastaneProje
         {
             FrmDoktorDuzenle frmDoktorDuzenle = new FrmDoktorDuzenle();
             frmDoktorDuzenle.Show();
-            this.Hide();
         }
 
         private void BtnYeniRandevu_Click(object sender, EventArgs e)
@@ -61,14 +60,6 @@ namespace HastaneProje
         private void button5_Click(object sender, EventArgs e)
         {
             string srg = textBox2.Text;
-            string sorgu = "Select * from Tbl_Randevu where HastaTC Like '" + srg + "'";
-            SqlDataAdapter adap = new SqlDataAdapter(sorgu, bgl.baglanti());
-            DataSet ds = new DataSet();
-            adap.Fill(ds);
-            this.dataGridView1.DataSource = ds.Tables[0];
-            bgl.baglanti().Close();
-
-
             if (textBox2.Text == "")
             {
                 DataTable dt1 = new DataTable();
@@ -76,6 +67,15 @@ namespace HastaneProje
                 da1.Fill(dt1);
                 dataGridView1.DataSource = dt1;
             }
+            else
+            {
+                string sorgu = "Select * from Tbl_Randevu where HastaTC Like '" + srg + "'";
+                SqlDataAdapter adap = new SqlDataAdapter(sorgu, bgl.baglanti());
+                DataSet ds = new DataSet();
+                adap.Fill(ds);
+                this.dataGridView1.DataSource = ds.Tables[0];
+                bgl.baglanti().Close();
+            }            
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)

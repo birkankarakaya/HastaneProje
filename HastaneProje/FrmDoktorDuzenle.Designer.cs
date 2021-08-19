@@ -50,7 +50,6 @@
             this.txtTCAra = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.mskTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -204,11 +203,11 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTCAra);
-            this.groupBox1.Location = new System.Drawing.Point(10, 49);
+            this.groupBox1.Location = new System.Drawing.Point(10, 12);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox1.Size = new System.Drawing.Size(265, 133);
+            this.groupBox1.Size = new System.Drawing.Size(265, 170);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doktor Ara";
@@ -262,24 +261,12 @@
             this.mskTelefon.Size = new System.Drawing.Size(138, 23);
             this.mskTelefon.TabIndex = 18;
             // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(10, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 33);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // FrmDoktorDuzenle
             // 
             this.AcceptButton = this.DoktorGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 640);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.mskTelefon);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
@@ -335,6 +322,5 @@
         private System.Windows.Forms.TextBox txtTCAra;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox mskTelefon;
-        private System.Windows.Forms.Button button2;
     }
 }

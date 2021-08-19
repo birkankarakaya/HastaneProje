@@ -24,7 +24,17 @@ namespace HastaneProje
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            rchSikayet.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            label5.Text = (dataGridView1.CurrentRow.Cells[2].Value + " " + dataGridView1.CurrentRow.Cells[3].Value).ToString();
+            SqlCommand komut = new SqlCommand("Select DogumTarihi, HastaCinsiyet FROM Tbl_Hastalar where HastaTC=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                label6.Text = dr[0].ToString();
+                label8.Text = dr[1].ToString();
+            }
+            bgl.baglanti().Close();
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -50,10 +60,15 @@ namespace HastaneProje
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void FrmDoktorDetay_Load(object sender, EventArgs e)
         {
             // TODO: Bu kod satırı 'hastaneProjeDataSet.Tbl_Doktorlar' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.tbl_DoktorlarTableAdapter.Fill(this.hastaneProjeDataSet.Tbl_Doktorlar);
+            //this.tbl_DoktorlarTableAdapter.Fill(this.hastaneProjeDataSet.Tbl_Doktorlar);
             LblTC.Text = TC;
             SqlCommand komut = new SqlCommand("Select DoktorAd,DoktorSoyad from Tbl_Doktorlar where DoktorTC=@p1", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", LblTC.Text);
